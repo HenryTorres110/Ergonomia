@@ -1,7 +1,6 @@
 import RPi.GPIO as GPIO
 import time
 
-GPIO.cleanup()
 LED_RED_PIN = 17
 LED_GREEN_PIN = 27
 
@@ -39,7 +38,7 @@ while True:
 			print("Esa ambulancia no se encuentra disponible")
 			GPIO.output(LED_GREEN_PIN, GPIO.LOW)
 			GPIO.output(LED_RED_PIN, GPIO.LOW)
-	except KeyInterrupt:
+	except KeyboardInterrupt:
 		GPIO.cleanup()
 
 	continue_program = input("Desea buscar otra ambulancia? (Si/No): ")
