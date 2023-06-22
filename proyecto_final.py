@@ -18,6 +18,8 @@ flotilla = {"Amb1": ["TUM a cargo: Henry", "Escuadra: 4 técnicos", "Unidad 1", 
 
 while True:
 	try:
+		print(" ")
+		print("----------------------------------------------")
 		GPIO.output(LED_GREEN_PIN, GPIO.LOW)
 		GPIO.output(LED_RED_PIN, GPIO.LOW)
 		print("Tiene 3 ambulancias dadas de alta en el sistema")
