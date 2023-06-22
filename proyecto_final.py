@@ -8,8 +8,7 @@ GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(LED_RED_PIN, GPIO.OUT)
 GPIO.setup(LED_GREEN_PIN, GPIO.OUT)
-GPIO.output(LED_GREEN_PIN, GPIO.LOW)
-GPIO.output(LED_RED_PIN, GPIO.LOW)
+
 
 print("-----Bienvenido al Sistema SynAmb-----")
 
@@ -19,6 +18,8 @@ flotilla = {"Amb1": ["TUM a cargo: Henry", "Escuadra: 4 técnicos", "Unidad 1", 
 
 while True:
 	try:
+		GPIO.output(LED_GREEN_PIN, GPIO.LOW)
+		GPIO.output(LED_RED_PIN, GPIO.LOW)
 		print("Tiene 3 ambulancias dadas de alta en el sistema")
 		print("ID´s: Amb1, Amb2, Amb3")
 		print("Para conocer el status de la ambulancia")
